@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Project</title>
+</head>
+<body bgcolor=#212121>
+    <div>
+        <center>
+            <div class="main-box">
+                <h1 style="color: rgb(7, 230, 18);">Predict the price of your dream house in california</h1>
+                <form action="{{ url_for('predict')}}", method="POST">
+                    <div class="entries-box">
+                        <input type="text" , name="Road" ,placeholder="Enter the name of the avenue you wish to live in..."><br><br>
+                        <label>Road</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="text" , name="County" ,placeholder="Enter the name of the city you wish to live in..."><br><br>
+                        <label>City</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="text" , name="City" ,placeholder="Enter the name of the county..."><br><br>
+                        <label>County</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="float" , name="housing_median_age" ,placeholder="Enter The house median age..."><br><br>
+                        <label>Housing median age</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="float" , name="total_rooms" ,placeholder="Enter Total rooms within a block..."><br><br>
+                        <label>Total rooms</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="float" , name="total_bedrooms" ,placeholder="Enter Total number of bedrooms within a block..."><br><br>
+                        <label>Total bedrooms</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="float" , name="population" ,placeholder="Enter Total number of people residing within a block..."><br><br>
+                        <label>Population</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="float" , name="households" ,placeholder="Enter Total number of households..."><br><br>
+                        <label>Households</label>
+                    </div>
+                    <div class="entries-box">
+                        <input type="float" , name="median_income" ,placeholder="Enter Median income..."><br><br>
+                        <label>Median income</label>
+                    </div>
+                    <div class="entries-box">
+                        <select name="ocean_proximity" id="Ocean_proximity" style="padding: 8px; margin: 4px 0;">
+                            <option value="NEAR BAY">NEAR BAY</option>
+                            <option value="NEAR OCEAN">NEAR OCEAN</option>
+                            <option value="INLAND">INLAND</option>
+                            <option value="1H OCEAN">1H OCEAN</option>
+                        </select><br><br>
+                        <label>Ocean proximity</label>
+                    </div>
+                    <button type="submit" class="predict">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <label>Predict Median house value</label>
+                    </button>
+                </form>
+            </div>
+        </center>
+    </div>
+</body>
+</html>
